@@ -1,4 +1,8 @@
 this is the change scommiting to develop.
 this is the change scommiting to developbranch.
+<<<<<<< HEAD
 raj
 ravi
+=======
+ram
+>>>>>>> develop
