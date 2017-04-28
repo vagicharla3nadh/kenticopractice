@@ -1,0 +1,7 @@
+﻿.big-input__input label { display: none }
+
+.big-input__input > input[type="checkbox"] { display: inline-block; }
+
+.box--small:hover {
+	min-height: 150px;
+}

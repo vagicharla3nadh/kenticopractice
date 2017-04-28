@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Frequently Asked Questions | Crown Relocations | New Zealand Moving Company | Furniture Movers | International Relocations | Storage | House Removals</title>
+<meta name="description" content="Crown Relocations is a Furniture Moving Company specialising in Local, Domestic, International Relocations and Corporate Transfers. " />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+<style type="text/css">
+.dhtmlgoodies_question{	/* Styling question */
+	margin-bottom:2px;
+	margin-top:2px;
+	padding-left:2px;
+/*	background-image:url('images/bg_answer.gif'); */
+	background-repeat:no-repeat;
+	background-position:top right;
+	height:20px;
+        color:#bf0301;
+        font-weight:bold;
+	overflow:hidden;
+	cursor:pointer;
+}
+.dhtmlgoodies_answer{	/* Parent box of slide down content */
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+
+
+}
+.dhtmlgoodies_answer_content{	/* Content that is slided down */
+	padding:1px;
+	font-size:12px;
+	position:relative;
+line-height:22px;
+padding-left:15px;
+}
+
+
+
+</style>
+<script type="text/javascript">
+/************************************************************************************************************
+Show hide content with slide effect
+Copyright (C) August 2010  DTHMLGoodies.com, Alf Magne Kalleland
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+Dhtmlgoodies.com., hereby disclaims all copyright interest in this script
+written by Alf Magne Kalleland.
+
+Alf Magne Kalleland, 2010
+Owner of DHTMLgoodies.com
+
+************************************************************************************************************/
+
+var dhtmlgoodies_slideSpeed = 10;	// Higher value = faster
+var dhtmlgoodies_timer = 10;	// Lower value = faster
+
+var objectIdToSlideDown = false;
+var dhtmlgoodies_activeId = false;
+var dhtmlgoodies_slideInProgress = false;
+var dhtmlgoodies_slideInProgress = false;
+var dhtmlgoodies_expandMultiple = false; // true if you want to be able to have multiple items expanded at the same time.
+
+function showHideContent(e,inputId)
+{
+	if(dhtmlgoodies_slideInProgress)return;
+	dhtmlgoodies_slideInProgress = true;
+	if(!inputId)inputId = this.id;
+	inputId = inputId + '';
+	var numericId = inputId.replace(/[^0-9]/g,'');
+	var answerDiv = document.getElementById('dhtmlgoodies_a' + numericId);
+
+	objectIdToSlideDown = false;
+
+	if(!answerDiv.style.display || answerDiv.style.display=='none'){
+		if(dhtmlgoodies_activeId &&  dhtmlgoodies_activeId!=numericId && !dhtmlgoodies_expandMultiple){
+			objectIdToSlideDown = numericId;
+			slideContent(dhtmlgoodies_activeId,(dhtmlgoodies_slideSpeed*-1));
+		}else{
+
+			answerDiv.style.display='block';
+			answerDiv.style.visibility = 'visible';
+
+			slideContent(numericId,dhtmlgoodies_slideSpeed);
+		}
+	}else{
+		slideContent(numericId,(dhtmlgoodies_slideSpeed*-1));
+		dhtmlgoodies_activeId = false;
+	}
+}
+
+function slideContent(inputId,direction)
+{
+
+	var obj =document.getElementById('dhtmlgoodies_a' + inputId);
+	var contentObj = document.getElementById('dhtmlgoodies_ac' + inputId);
+	height = obj.clientHeight;
+	if(height==0)height = obj.offsetHeight;
+	height = height + direction;
+	rerunFunction = true;
+	if(height>contentObj.offsetHeight){
+		height = contentObj.offsetHeight;
+		rerunFunction = false;
+	}
+	if(height<=1){
+		height = 1;
+		rerunFunction = false;
+	}
+
+	obj.style.height = height + 'px';
+	var topPos = height - contentObj.offsetHeight;
+	if(topPos>0)topPos=0;
+	contentObj.style.top = topPos + 'px';
+	if(rerunFunction){
+		setTimeout('slideContent(' + inputId + ',' + direction + ')',dhtmlgoodies_timer);
+	}else{
+		if(height<=1){
+			obj.style.display='none';
+			if(objectIdToSlideDown && objectIdToSlideDown!=inputId){
+				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.display='block';
+				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.visibility='visible';
+				slideContent(objectIdToSlideDown,dhtmlgoodies_slideSpeed);
+			}else{
+				dhtmlgoodies_slideInProgress = false;
+			}
+		}else{
+			dhtmlgoodies_activeId = inputId;
+			dhtmlgoodies_slideInProgress = false;
+		}
+	}
+}
+
+
+
+function initShowHideDivs()
+{
+	var divs = document.getElementsByTagName('DIV');
+	var divCounter = 1;
+	for(var no=0;no<divs.length;no++){
+		if(divs[no].className=='dhtmlgoodies_question'){
+			divs[no].onclick = showHideContent;
+			divs[no].id = 'dhtmlgoodies_q'+divCounter;
+			var answer = divs[no].nextSibling;
+			while(answer && answer.tagName!='DIV'){
+				answer = answer.nextSibling;
+			}
+			answer.id = 'dhtmlgoodies_a'+divCounter;
+			contentDiv = answer.getElementsByTagName('DIV')[0];
+			contentDiv.style.top = 0 - contentDiv.offsetHeight + 'px';
+			contentDiv.className='dhtmlgoodies_answer_content';
+			contentDiv.id = 'dhtmlgoodies_ac' + divCounter;
+			answer.style.display='none';
+			answer.style.height='1px';
+			divCounter++;
+		}
+	}
+}
+window.onload = initShowHideDivs;
+</script>
+
+
+<script language="JavaScript" type="text/javascript" src="//www.crownrelo.com/relo/scripts/s_code_nz.js"></script></head>
+
+<body>
+
+<div id="container">
+
+<div id="header">
+
+<div id="logo"><img src="images/logo.jpg" alt="Crown Relocations" /></div>
+<div id="phone"><img src="images/phone.jpg" /></div>
+
+<div id="nav">
+<ul>
+<li><a href="index.aspx">Home</a></li>
+<li><a href="get-a-quote.aspx">Get a Quote</a></li>
+<li><a href="moving-to-new-zealand.html">Moving to NZ</a></li>
+<li><a href="moving-interisland.html">Moving Interisland</a></li>
+<li><a href="moving-services.html">Moving Services</a></li>
+<li><a href="special-deals.aspx">Special Deals</a></li>
+<li><a href="about-us.html">About Us</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+<p class="clear" />
+<!-- nav ends -->
+</div>
+
+<!-- header ends -->
+</div>
+
+
+<div id="content">
+
+<div id="left">
+
+
+<div id="left-content">
+<h1>Moving Home is a big undertaking.</h1>
+
+<p class="grey-big">You've got questions... here are the answers...</p>
+
+<p>Crown Relocations specialises in the packing, storage, and transportation of household goods both within New Zealand and internationally. Crown has grown from humble beginnings to become worldwide leaders in the Relocations Industry with over 5000 staff in 55 countries. </p>
+
+
+<div id="faq">
+
+<!--<h2>Why Should I use Crown?</h2>
+
+<div class="dhtmlgoodies_question">1. Why Should I use Crown?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		There are many unique features about Crown&#8217;s service that are unrivalled by any other removal company or network. The primary reason you should use Crown however, is because we are dedicated to providing the complete Relocation Experience through a superior standard of customer service and communication every step of the way- within New Zealand and worldwide. 
+	</div>
+</div>
+   <hr>
+
+<div class="dhtmlgoodies_question">2. How many household relocations does Crown Relocations New Zealand manage per year?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Crown Relocations in New Zealand manage over 12,500 moves per year and globally Crown moves one container every 4 minutes.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">3. How financially stable is Crown Relocations?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Crown is the biggest privately owned relocation company in the world. We have more than 200 operations in 52 countries and have been operating worldwide for more than 40 years.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">4. Does Crown have a quality management program?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Yes, Crown understands that high quality and continuous improvement are prerequisites to customer satisfaction. We have developed our Quest Quality Program in support of ISO 9001:2000 accreditation for our business systems and practices. The last 3 years running, Crown New Zealand has won this coveted global Quest Quality Award for service excellence across the 50+ countries in the Crown Group.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">5. How does Crown measure customer satisfaction?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Our customers complete a performance survey at destination for quality control. This enables us to monitor service levels and ensure we are meeting the expectations of every customer. Any concerns or service failures are addressed immediately.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">6. What other services does Crown offer?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Crown offer a variety of Relocation Services that includes home search, home sale, tenancy management, orientation, school search, expense management, immigration and repatriation. We also can provide home valet and pet relocation services.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">7. What training does Crown offer for its staff and how does this benefit me?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Crown offer a variety of Relocation Services that includes home search, home sale, tenancy management, orientation, school search, expense management, immigration and repatriation. We also can provide home valet and pet relocation services.
+	</div>
+</div>
+   <hr>-->
+
+
+  
+ <div class="dhtmlgoodies_question">1. How much will it cost?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		For larger moves it&#8217;s always ideal for us to
+visit your home to determine the cost of your move, as it depends on
+numerous factors such as packing, access, size of consignment, number
+of staff etc. With this information we can compile an accurate
+quotation tailored to your individual move.
+	</div>
+</div>
+    <hr>
+    
+ <div class="dhtmlgoodies_question">2. What areas do you cover in New Zealand?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		We cover the whole of New Zealand with our own
+transport offering full, part and return load services. And of course
+we can move you virtually anywhere in the world, in conjunction with
+our network of Crown branches and service partners around the globe.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">3. How much notice do you require?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Crown Relocations are usually booked between 7
+and 14 days before the expected move takes place. For international
+relocations ideally at least 21 days notice is required. Please always
+try to give as much notice as possible.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">4. Can Crown provide a pre-move consultation?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Your Crown consultant will help you choose the
+service delivery that best meets your needs, explain what to expect
+when you arrive at your new destination and answer all of your
+questions. Together, you will choose and schedule a packing day(s).
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">5. Does Crown provide a relocation plan?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Yes, all of the pertinent information will be
+documented on your &#8220;Relocation Planner&#8221;. The &#8220;Relocation Planner&#8221;
+includes a countdown for a successful move. This information will help
+you plan your move in advance, from the date you start packing to the
+time your personal belongings are delivered to your new home.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">6. Does Crown provide &#8220;Settling In Tips&#8221;?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Yes, customized tip sheets provide useful
+advice from Crown professionals who live in different cities around the
+world, including information about transportation, schools, shopping,
+accommodation, banking and much more. &#8220;Settling In Tips&#8221; are available
+for over a 100 international cities.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">7. What size are your vehicles?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		We operate a range of purpose built removal vehicles and containers. Please let us know if there is difficult access at either address as this will allow us to plan your move with smaller vehicles or make the necessary arrangements to transship your goods.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">8. What training does Crown offer for its staff and how does this benefit me?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Being an International relocation company we
+have an internal program with continuous training throughout the year.
+This program also runs in association with ISO 9001 and our own Quest
+program. Stringent staff selection supported by complete induction
+training and ongoing assessments allows our customers to receive a
+complete relocation experience.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">9. Can I pack my own cartons?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Many countries are no longer accepting
+shipments that were packed by owner. In addition, any damage incurred
+to items you packed yourself may not be covered by transit protection.
+Therefore, it is suggested that you let Crown pack your household
+items. All Crown crews are professionally trained and have years of
+experience packing people&#8217;s precious belongings.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">10. How does Crown pack my China, Glass and Crystal?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		We use tube wrapping for stemmed glassware, crystal and fine china. Each item is wrapped in craft paper before being rolled into strips of corrugated cardboard which creates a tube or cylinder effect. The finished tube creates a cushioning effect at each end of the packages which provides maximum protection against any downward pressure on the carton. This is a highly recommended technique for fragile items.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">11. Will the Packing Crew use the original packing materials for my appliances?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		If you have any of the original cartons and
+packing materials for your appliances or other household items, make
+sure that you inform your Crew Supervisor. He or she will inspect the
+materials to determine whether your goods will be safer using these or
+our own specialized packing materials.
+	</div>
+</div>
+   <hr>
+   
+ <div class="dhtmlgoodies_question">12. Do you dismantle and re-assemble my bed, wardrobe etc.?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Our staff will carry out dismantling and
+re-assembling to the best of their ability. It is important that we
+know what is required at the quotation stage to allow for the necessary
+resources and equipment to be provided.
+	</div>
+</div>
+	   <hr> 
+	 
+<div class="dhtmlgoodies_question">13. Do I need to unpack my Chest of Drawers?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Providing the unit is sturdy enough then light
+items such as clothing, bedding etc. can be left in. Please remove any
+books, magazines, breakable items etc. Self assembly furniture does not
+respond well to moving so this type of furniture must only be moved
+while completely empty.
+	</div>
+</div>
+	    <hr>
+	 
+<div class="dhtmlgoodies_question">14. What should I do with my gas cylinders of flammable liquids?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Gas cylinders cannot be transported on our
+vehicles unless purged. Flammable liquids, however contained, must not
+be submitted for removal either. These items are not covered under our
+insurance, other arrangements must be made. Equipment such as garden
+mowers and chainsaws should be drained of all liquids beforehand.
+	</div>
+</div>
+   <hr>
+   
+<div class="dhtmlgoodies_question">15. Does my furniture get placed to my requirements?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		It is always best if you have a clear idea of
+where you want your furniture to be placed. Our staff will arrange the
+rooms to your liking but will not have the time to continually
+rearrange your room.
+	</div>
+</div>
+	   <hr>
+        	  
+<div class="dhtmlgoodies_question">16. Will the Crew unpack for me?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		The Crown Crew will unpack your effects and
+take away all used packing material. You may also choose to have Crown
+arrange handyman or domestic help services to help you get settled into
+your new home.
+	</div>
+</div>			 
+	   <hr>
+<div class="dhtmlgoodies_question">17. Does Crown provide storage (Long term or temporarily)?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		We can service all your storage needs in our modern facilities which are approved and licensed by the New Zealand Customs department. As a result our facilities must adhere to strict requirements to ensure safety and security such as: monitored alarms, structural specifications and controlled public access.
+	</div>
+</div>		
+	   <hr>
+       
+<div class="dhtmlgoodies_question">18. What is the size of your storage containers?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		Our hometainers hold approximately 8 cubic
+meters. These are standard removal industry size, ideal to be
+fork-lifted on and off vehicles allowing us to load and unload directly
+at your premises if conditions permit.
+	</div>
+</div>		
+	   <hr>
+       
+<div class="dhtmlgoodies_question">19. How long can I store for?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		>You can store your goods for as long or short a
+period as necessary. Storage is charged weekly and all customers
+receive an invoice/statement every month.
+	</div>
+</div>		
+		   <hr>	
+           												 
+<div class="dhtmlgoodies_question">20. How can I pay for storage?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		You can pay by cheque, credit or debit card. A popular option is to pay by direct debit if you are storing for a longer of time.
+	</div>
+</div>		
+	   <hr>
+       
+<div class="dhtmlgoodies_question">21. What items are not allowed to be stored?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		>Flammable items, gas bottles, plants, any opened food such as oils, sauces etc.
+	</div>
+</div>											
+	   <hr>
+       
+<div class="dhtmlgoodies_question">22. Why is insurance protection necessary?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		While Crown&#8217;s professional crew will pack,
+transport and unpack your belongings as safely and securely as
+possible, it is important to note that these items will be traveling on
+a boat, plane, truck or other mode of transport &#8211; all of which carry
+inherent risks.
+	</div>
+</div>	
+   <hr>
+   
+<div class="dhtmlgoodies_question">23. How do I track my shipment?</div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		All of crown&#8217;s worldwide facilities are linked
+by a common communications and operating network. This technological
+investment means that before you arrive at your new destination, the
+local Crown office will already have up to date information on your
+relocation. Crown&#8217;s website, <a href="http://www.crownrelo.com/login">www.crownrelo.com/login</a>, lets you track your shipment in real-time using any computer with internet access
+	</div>
+</div>																				
+	   <hr>
+       									
+	
+	</div>
+</div>
+<!-- left ends -->
+</div>
+
+<div id="right">
+
+<!-- BEGIN LivePerson Button Code -->
+<div id="chat-panel">
+    <a id="_lpChatBtn" href='http://server.iad.liveperson.net/hc/64392397/?cmd=file&file=visitorWantsToChat&site=64392397&byhref=1&imageUrl=http://www.crownrelo.co.nz/images/livepersonchat' target='chat64392397' onclick="var s=s_gi(s_account);s.linkTrackVars='events'; s.linkTrackEvents='event4'; s.events='event4'; s.tl(this,'o','LiveHelp'); lpButtonCTTUrl = 'http://server.iad.liveperson.net/hc/64392397/?cmd=file&file=visitorWantsToChat&site=64392397&imageUrl=http://www.crownrelo.co.nz/images/livepersonchat&referrer='+escape(document.location); lpButtonCTTUrl = (typeof(lpAppendVisitorCookies) != 'undefined' ? lpAppendVisitorCookies(lpButtonCTTUrl) : lpButtonCTTUrl); window.open(lpButtonCTTUrl,'chat64392397','width=472,height=320,resizable=yes');return false;" >
+        <img src='http://server.iad.liveperson.net/hc/64392397/?cmd=repstate&site=64392397&channel=web&&ver=1&imageUrl=http://www.crownrelo.co.nz/images/livepersonchat' name='hcIcon' border="0">
+    </a>
+</div>
+<!-- END LivePerson Button code -->
+
+<div id="get-quote-panel"><a href="get-a-quote.aspx"><img src="images/get-a-quote.jpg" alt="Get a Quote" /></a></div>
+
+<div id="special-deals-panel"><a href="special-deals.aspx"><img src="images/special-deals.jpg" alt="Special Deals" /></a></div>
+
+<!-- right ends-->
+</div>
+
+<div id="grey">&nbsp;</div>
+
+
+
+<div id="footer-links">
+
+<div class="footer-panel">
+<h3>NZ Relocation Services</h3>
+<ul>
+<li><a href="new-zealand-relocation-services/corporate-relocation.html">Corporate Relocation</a></li>
+<li><a href="new-zealand-relocation-services/relocation-services.aspx">Relocation Services</a></li>
+<li><a href="new-zealand-relocation-services/business-relocation.html">Business Relocation</a></li>
+<li><a href="new-zealand-relocation-services/office-relocation.html">Office Relocation</a></li>
+<li><a href="new-zealand-relocation-services/moving-house-checklist.html">Moving House Checklist</a></li>
+<li><a href="new-zealand-relocation-services/moving-house-checklist.html">House Removals/Relocations</a></li>
+<li><a href="new-zealand-relocation-services/packing-standards.html">Packing Standards</a></li>
+<li><a href="new-zealand-relocation-services/furniture-moving-quotes.html">Furniture Moving Quotes</a></li>
+<li><a href="new-zealand-relocation-services/relocation-calculator.html">Relocation Calculator</a></li>
+</ul>
+</div>
+<div class="footer-panel">
+<h3>Local Furniture Moving</h3>
+<ul>
+<li><a href="local-furniture-moving-services/local-house-relocation.html">Local House Relocation</a></li>
+
+<li><a href="local-furniture-moving-services/local-furniture-movers-auckland.html">Local Furniture Movers in Auckland</a></li>
+<li><a href="local-furniture-moving-services/local-furniture-movers-wellington.html">Local Furniture Movers in Wellington</a></li>
+<li><a href="local-furniture-moving-services/local-furniture-christchurch.html">Local Furniture Movers in Christchurch</a></li>
+</ul>
+</div>
+<div class="footer-panel">
+<h3>Moving Around New Zealand</h3>
+<ul>
+<li><a href="moving-around-new-zealand/long-distance-moving-services.html">Long Distance Moving Services</a></li>
+<li><a href="moving-around-new-zealand/moving-company-auckland.html">Moving Company Auckland</a></li>
+<li><a href="moving-around-new-zealand/moving-company-wellington.html">Moving Company Wellington</a></li>
+<li><a href="moving-around-new-zealand/moving-company-christchurch.html">Moving Company Christchurch</a></li>
+<li><a href="moving-around-new-zealand/moving-company-dunedin.html">Moving Company Dunedin</a></li>
+<li><a href="moving-around-new-zealand/special-deals.html">Special Deals</a></li>
+<li><a href="moving-around-new-zealand/insurance-protection.html">Transit Protection</a></li>
+<li><a href="moving-around-new-zealand/ancillary-services.html">Ancillary Services</a></li>
+</ul>
+</div>
+<div class="footer-panel">
+<h3>International Moving</h3>
+<ul>
+<li><a href="international-relocations/moving-overseas.html">Moving Overseas</a></li>
+<li><a href="international-relocations/moving-to-australia.html">Moving to Australia</a></li>
+<li><a href="international-relocations/moving-to-new-zealand.html">Moving to New Zealand</a></li>
+<li><a href="international-relocations/shipment-of-your-household-goods.html">Shipment of your Household Goods</a></li>
+<li><a href="international-relocations/marine-insurance.html">Marine Insurance</a></li>
+<li><a href="international-relocations/ancillary-services.html">Ancillary Services</a></li>
+</ul>
+</div>
+
+
+
+<!-- footer links ends -->
+</div>
+<div id="grey">&nbsp;</div>
+<div id="social-links" >
+            <div class="facebook">
+                <a href="http://www.facebook.com/pages/Crown-Relocations-NZ/363472075184"><img src="images/facebook.gif" alt="Facebook" /></a>
+            </div>            
+            <div class="plusone">
+                <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+                <g:plusone></g:plusone>
+            </div>
+            <div class="twitter" >
+                <a href="http://twitter.com/CrownReloNZ"><img src="images/twitter.gif" alt="Twitter" /></a>
+            </div>
+        </div>
+
+
+
+<!-- content ends -->
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<!-- container ends -->
+</div>
+
+
+
+    <!-- BEGIN Invitation Positioning  -->
+    <script type="text/javascript">
+        var lpPosY = 20;
+        var lpPosX = 20;
+    </script>
+    <!-- END Invitation Positioning  -->
+
+    <!-- BEGIN HumanTag Monitor. DO NOT MOVE! MUST BE PLACED JUST BEFORE THE /BODY TAG -->
+    <script type="text/javascript" src="js/x.js"></script>
+
+    <div name="mylayer" id="mylayer" style="z-index:90; position:absolute; visibility:hidden; left:10px; top:10px;">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <a name="needRef" id="needRef" href="#" title="invitation popup window for live chat with an online representative" onclick="return hcAcceptCall()" target="_self" onmouseover='hcSetImageGo("need_help","need_help_on.gif",false)' onmouseout='hcSetImageGo("need_help","need_help_off.gif",true)'>
+                            <img name="need_help" id="need_help" onload="hcFloatIconLoaded()" alt="invitation popup window for live chat with an online representative" style="display:block;" border="0"/>
+                        </a>
+                        <a href="#" onclick="return hcRejectCall()" target="_self" onmouseover='hcSetImageGo("need_close","close_on.gif",false)' onmouseout='hcSetImageGo("need_close","close_off.gif",true)'>
+                            <img name="need_close" id="need_close" alt="Close Chat Invitation" style="display:block;" border="0"/>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- END HumanTag Monitor. DO NOT MOVE! MUST BE PLACED JUST BEFORE THE /BODY TAG -->
+
+    <!-- BEGIN Google Analytics -->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); 
+    </script> 
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-484517-1");
+            pageTracker._trackPageview();
+        } catch (err) { }
+    </script> 
+    <!-- END Google Analytics -->
+
+    <!-- BEGIN LivePerson Monitor. -->
+        <script type="text/javascript">            var lpMTagConfig = { 'lpServer': "server.iad.liveperson.net", 'lpNumber': "64392397", 'lpProtocol': "https" }; function lpAddMonitorTag(src) { if (typeof (src) == 'undefined' || typeof (src) == 'object') { src = lpMTagConfig.lpMTagSrc ? lpMTagConfig.lpMTagSrc : '/hcp/html/mTag.js'; } if (src.indexOf('http') != 0) { src = lpMTagConfig.lpProtocol + "://" + lpMTagConfig.lpServer + src + '?site=' + lpMTagConfig.lpNumber; } else { if (src.indexOf('site=') < 0) { if (src.indexOf('?') < 0) src = src + '?'; else src = src + '&'; src = src + 'site=' + lpMTagConfig.lpNumber; } }; var s = document.createElement('script'); s.setAttribute('type', 'text/javascript'); s.setAttribute('charset', 'iso-8859-1'); s.setAttribute('src', src); document.getElementsByTagName('head').item(0).appendChild(s); } if (window.attachEvent) window.attachEvent('onload', lpAddMonitorTag); else window.addEventListener("load", lpAddMonitorTag, false);</script>
+    <!-- END LivePerson Monitor. -->
+
+     <!-- SiteCatalyst code version: H.19.4.
+Copyright 1997-2009 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript" type="text/javascript" src="//www.crownrelo.com/relo/scripts/s_code_nz.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+    /* You may give each page an identifying name, server, and channel on
+    the next lines. */
+    s.pageName = "relonz:house moving:faq"
+    s.server = ""
+    s.channel = "relonz:house moving"
+    s.pageType = ""
+    s.prop1 = "relonz"
+    s.prop2 = "relonz:house moving:faq"
+    s.prop3 = ""
+    s.prop4 = ""
+    s.prop5 = ""
+    /* Conversion Variables */
+    s.campaign = ""
+    s.state = ""
+    s.zip = ""
+    s.events = ""
+    s.products = ""
+    s.purchaseID = ""
+    s.eVar1 = "relonz"
+    s.eVar2 = "relonz:house moving"
+    s.eVar3 = "relonz:house moving:faq"
+    s.eVar4 = ""
+    s.eVar5 = ""
+    s.eVar12 = ""
+    /* Hierarchy Variables */
+    s.hier1 = "relonz|house moving"
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = s.t(); if (s_code) document.write(s_code)//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-')
+//--></script><noscript><a href="http://www.omniture.com" title="Web Analytics"><img
+src="http://cwgrelonzprd.112.2O7.net/b/ss/cwgrelonzprd/1/H.19.4--NS/0?[AQB]&cdp=3&[AQE]"
+height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.19.4. -->
+</body>
+</html>

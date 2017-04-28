@@ -1,0 +1,238 @@
+.content-section .header span {
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.quote.rounded-content {
+	background:white;
+}
+
+.quote-nav a {
+	background:none;
+	padding:0;
+
+	float:left;
+	margin-bottom:20px;
+	margin-top:30px;
+}
+
+.quote .content-section {
+	background:white;
+	border:none;
+	padding:0;
+}
+
+h1, h2 {
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	color:#5C5C5C;
+}
+
+.details-form {
+	margin:0;
+}
+
+.details-form label, 
+.details-form input, 
+.Step4 .details-form textarea, 
+.details-form textarea, 
+.details-form .EditingFormLabel, 
+.details-form .terms, 
+.details-form div {
+	color: #5C5C5C;
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+}
+
+.details .details-form h2 {
+	margin-top:50px;
+}
+
+input[type="text"], 
+input[type="password"] {
+	border:none;
+	border-radius:0;
+	padding:5px;
+	background:#E8E8E8;
+	margin-bottom:10px;
+}
+
+.quote td select.CountriesDropdown, 
+.DropDownField {
+	background:#E8E8E8;
+	border: none;
+	border-radius: 0;
+	padding:5px;
+	width:90%;
+}
+
+.QuickQuoteOnSite .NavigationButtons {
+	padding: 0;
+	width: auto;
+	left:0;
+	right:0;
+}
+
+.NavigationButtons {
+	height:auto;
+	position:static;
+	padding-top:0;
+}
+
+.quote .secondary-content {
+	border:none;
+	width:338px;
+	margin-top:0;
+}
+
+.QuickQuoteOnSite .primary-content {
+	width:800px;
+}
+
+.NavigationSteps {
+	width:auto;
+	margin:auto;
+	padding-top:0;
+}
+
+.RightSideComments {
+	position:static;
+}
+
+.QuickQuoteOnSite .RightSideComments {
+	background:none repeat scroll 0 0 #CC0000;
+	border:none;
+	border-radius:0;
+	padding:15px;
+	width:auto;
+	margin:30px 0;
+	font-size:17px;
+}
+
+.QuickQuoteOnSite .RightSideComments p {
+	line-height: 1.5;
+}
+
+.RightMenuNumbers a {
+	height:80px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:auto;
+}
+
+#btnStep1 {
+	background-image:url("images/Step1.jpg");
+}
+
+#selected #btnStep1 {
+	background-image:url("images/Step1Ticked.jpg");
+}
+
+.RightMenuNumbers + .RightMenuNumbers {
+	padding-top:0;
+	background:none;
+}
+
+#btnStep2 {
+	background-position:center center;
+	background-image:url("images/Step2.jpg");
+}
+
+#selected #btnStep2 {
+	background-image:url("images/Step2Ticked.jpg");
+}
+
+#btnStep3 {
+	background-position:center center;
+	background-image:url("images/Step3.jpg");
+}
+
+#selected #btnStep3 {
+	background-image:url("images/Step3Ticked.jpg");
+}
+
+#btnStep2:hover, #selected #btnStep2,
+#btnStep3:hover, #selected #btnStep3 {
+	background-position:center center;
+}
+
+#Step4LinkButton {
+	display:none;
+}
+
+.room,
+.room-selected {
+	background:#9E2925;
+}
+
+.room a,
+.room-selected a {
+	color:white !important;
+}
+
+.rounded-content {
+	padding:0 0 20px 20px;
+}
+
+.page-banner-secondary .page-banner-content {
+	background:#C71F25;
+}
+
+.quote input[type="text"], .quote input[type="password"] {
+	width:90%;
+}
+
+.special-tip {
+	display:block;
+}
+
+.special-tip h2 {
+	background-color: white;
+	border-radius: 0;
+	color: #5C5C5C;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: auto;
+	font-size:1.28em;
+	line-height:1.16;
+	text-transform:none;
+	margin-bottom:0.5em;
+}
+
+.special-tip p {
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+.special-tip {
+	border-left: 5px solid #CC0000;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.special-tip > *:first-child {
+    margin-top: 0;
+}
+
+.special-tip > *:last-child {
+    margin-bottom: 0;
+}
+
+.ThanksYouPanel,
+.primary-content {
+	padding-top:40px;
+}
+
+.ThanksYouPanel h1 {
+	font-size:1.5em;
+	text-transform:none;
+}
+
+.quote .items-listing td img {
+	max-width:none;
+}

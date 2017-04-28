@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="admin.css" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<script language="JavaScript" type="text/javascript" src="//www.crownrelo.com/relo/scripts/s_code_nz.js"></script></head>
+<body>
+    <form id="form1" runat="server">
+
+    <table width="100%" class="links">
+        <tr align="center">
+            <td><a href="DealsAdminInternational.aspx">International Deals</a></td>
+            <td><a href="DealsAdminNational.aspx">National Deals</a></td>
+            <td><a href="EmailsAdmin.aspx">Emails</a></td>
+            <td><a href="InterIslandAdmin.aspx">Inter-island</a></td>
+            <td><a href="MovingToNZAdmin.aspx">Moving to NZ - Emails</a></td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <div>
+        <asp:ContentPlaceHolder id="cph1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,189 @@
+﻿#online-estimate { 
+float:left;
+padding:10px;
+background-image:url(images/estimate-background.gif);
+background-repeat:no-repeat;
+width:289px;
+}
+
+.estimate-heading { 
+padding-left:45px;
+padding-top:8px;
+height:25px;
+background-image:url(images/online-estimate-calculator.gif);
+background-repeat:no-repeat;
+}
+
+#quote-request { 
+padding:10px;
+margin-left:350px;
+background-image:url(images/quote-request-background.gif);
+background-repeat:no-repeat;
+width:200px;
+height:249px;
+}
+
+.quote-heading { 
+padding-left:45px;
+padding-top:8px;
+height:25px;
+background-image:url(images/quote-request-icon.gif);
+background-repeat:no-repeat;
+}
+
+#left-wide { 
+float:left;
+margin-top:0px;
+width:710px;
+}
+
+.tableborder {
+border			: 1px solid #FDB810;
+}
+
+.smlcopy {
+	color:#FFFFFF;
+	font-family	:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+.columntile {background:url(images/tile1.gif) right repeat-y;height:100%;}
+
+.youarehere {
+	width:160px;
+	background:url(images/youarehere.gif) no-repeat top center;
+	display:block;
+	line-height:60px;
+}
+
+.copy ol {
+	list-style-type:decimal;
+	margin-right:50px;
+	margin-left:20px;
+}
+
+
+.subnav ul {
+	list-style-type:none;
+	margin:1px;
+	padding:0px;
+	margin-left:1px;
+}
+
+.subnav li
+{
+    padding-bottom:0px !important;
+}
+
+.subnav li a{
+	width:160px;
+	background:#9E0000 url(images/snav-pend.gif) no-repeat left center;
+	margin:1px 0px 0px 0px;
+	padding:3px 0px;
+	display:block;
+	line-height:25px;
+	text-indent:35px;
+	text-decoration:none;
+	font-size:11px;
+	color:#FEBA33;
+}
+
+.subnav #selected a {
+	width:165px;
+	background:#570000 url(images/snav-prog.gif) no-repeat left center;
+	color:#ffffff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.subnav .done a {
+	background:#570000 url(images/snav-done.gif) no-repeat left center;
+	width:160px;
+	display:block;
+}
+
+.subnav .room a {
+	background: url(images/snav-pend.gif) no-repeat left center;
+	border-bottom:1px solid #FEBA33;
+	border-left:1px solid #FEBA33;
+	width:130px;
+	display:block;
+	margin-left:30px;
+}
+
+.subnav .room-selected a {
+	background: url(images/snav-room-prog.gif) no-repeat left center;
+	border-bottom:1px solid #FEBA33;
+	border-left:1px solid #FEBA33;
+	width:130px;
+	display:block;
+	margin-left:30px;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+.subnav .room-done a {
+	background:#cc0000 url(images/snav-done.gif) no-repeat left center;
+	border-bottom:1px solid #FEBA33;
+	border-left:1px solid #FEBA33;
+	width:130px;
+	display:block;
+	margin-left:30px;
+}
+
+.dkred {background:#9E0000;}
+
+/* background colour changed by TNR from #ff0000  to Transparent to hide big red line this was causing */
+.panelnav {background:url('images/mainbg.gif') no-repeat right top; 
+display:block; height:60px;
+}
+
+.padwizard {padding:0px 10px 10px 10px;}
+
+.validationSummary
+{
+    background-color:Yellow;
+    font-weight:bold;
+    color:Red;
+}
+
+.mandatory
+{
+    color:#FEBA33;
+}
+
+.imagebg 
+{
+    background:url(images/imgbg.gif) center top no-repeat;
+    display:block; 
+    width:89px;
+    text-align:center;
+    padding-bottom:5px;
+    line-height:15px;
+}
+
+.yellowbox {background:#FDB810; padding:5px 10px; display:block;color:#660000;font-size:12px;}
+
+.whitelink { color:#FFFFFF !important; }
+
+h4 {
+font-size:14px;
+font-weight:bold;
+color:#FF9900 !important;
+line-height:18px;
+}
+
+.noDisplay { display:none;}
+.datePicker	{ width:140px; cursor:hand;	}
+
+
+tr {
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#ffffff;
+line-height:30px;
+}
+
+.black-text { 
+color: #000000
+}

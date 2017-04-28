@@ -1,0 +1,25 @@
+D:\Projects\Crown.Estimates2011\CrownEstimates2011\PhoneImageHandler\bin\Debug\PhoneImageHandler.dll
+D:\Projects\Crown.Estimates2011\CrownEstimates2011\PhoneImageHandler\bin\Debug\PhoneImageHandler.pdb
+D:\Projects\Crown.Estimates2011\CrownEstimates2011\PhoneImageHandler\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Crown.Estimates2011\CrownEstimates2011\PhoneImageHandler\obj\Debug\PhoneImageHandler.dll
+D:\Projects\Crown.Estimates2011\CrownEstimates2011\PhoneImageHandler\obj\Debug\PhoneImageHandler.pdb
+D:\Shruthi V\Crown-Quotation\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.dll
+D:\Shruthi V\Crown-Quotation\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.pdb
+D:\Shruthi V\Crown-Quotation\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.csprojResolveAssemblyReference.cache
+D:\Shruthi V\Crown-Quotation\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.dll
+D:\Shruthi V\Crown-Quotation\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\Crown-Quotation\CrownQuottaion-Site_Shruthi\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\Crown-Quotation\CrownQuottaion-Site_Shruthi\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\Crown-Quotation\CrownQuottaion-Site_Shruthi\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.csprojResolveAssemblyReference.cache
+D:\Kudos Projects\Crown-Quotation\CrownQuottaion-Site_Shruthi\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\Crown-Quotation\CrownQuottaion-Site_Shruthi\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\CrownQuottaion-Site-With-Header-And-Footer\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\CrownQuottaion-Site-With-Header-And-Footer\CrownQuottaion-Site\PhoneImageHandler\bin\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\CrownQuottaion-Site-With-Header-And-Footer\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.csprojResolveAssemblyReference.cache
+D:\Kudos Projects\CrownQuottaion-Site-With-Header-And-Footer\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\CrownQuottaion-Site-With-Header-And-Footer\CrownQuottaion-Site\PhoneImageHandler\obj\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\Crown-Quotation-New\Crown-Quotation-New\PhoneImageHandler\bin\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\Crown-Quotation-New\Crown-Quotation-New\PhoneImageHandler\bin\Debug\PhoneImageHandler.pdb
+D:\Kudos Projects\Crown-Quotation-New\Crown-Quotation-New\PhoneImageHandler\obj\Debug\PhoneImageHandler.csprojResolveAssemblyReference.cache
+D:\Kudos Projects\Crown-Quotation-New\Crown-Quotation-New\PhoneImageHandler\obj\Debug\PhoneImageHandler.dll
+D:\Kudos Projects\Crown-Quotation-New\Crown-Quotation-New\PhoneImageHandler\obj\Debug\PhoneImageHandler.pdb

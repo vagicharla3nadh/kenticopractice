@@ -1,0 +1,52 @@
+/*
+## Listings
+```
+*/
+
+
+/*
+## Four Listings
+```
+<ul class="four-listing">
+	<li><span class="number-rounded">1</span></li>
+	<li><span class="number-rounded">2</span></li>
+	<li><span class="number-rounded">3</span></li>
+	<li><span class="number-rounded">4</span></li>
+</ul>
+```
+*/
+
+
+.five-listing{
+	margin:0;
+	padding: 0;
+}
+
+.five-listing li{
+	margin: 0;
+	padding:0;
+	width: 20%;
+	display: inline;
+	float: left;
+	text-align: center;
+  /* float: right; */
+}
+
+.five-listing li span.number-rounded{
+  position: relative;
+  top: 66px;
+}
+
+.five-listing li  h1,
+.five-listing li  h2,
+.five-listing li  h3,
+.five-listing li  h5,
+.five-listing li  h6{
+  font-size: 29px;
+  font-family: helvetica;
+  text-transform: none;
+  font-weight: normal;
+  margin: 92px 0 0 30px;
+  text-align: center;
+}
+

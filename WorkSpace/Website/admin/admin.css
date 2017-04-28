@@ -1,0 +1,62 @@
+﻿body
+{
+    margin:0;
+    padding:5px 5px 5px 5px;
+    font-family:Verdana, Arial, sans-serif;
+    font-size:10pt;
+}
+
+h1
+{
+    margin: 5px 0px 5px 0px;
+}
+h2
+{
+    margin: 5px 0px 5px 0px;
+}
+
+.datepicker	
+{
+    cursor:pointer;	
+    font-size:10pt;
+}
+.datepickerIframe
+{
+    border:solid 1px #3366cc;
+    background-color:White;
+}
+.datepickerBody {
+	  
+    font:8pt Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    COLOR: #000000;
+}
+.datepickerDate A:link { color: black;}
+.datepickerDate A:visited { color: black;}
+.datepickerHeader 
+{
+	background-color: #99ccff;
+	height: 18px;
+}
+.datepickerSelectedDate
+{
+	background-color: #99ccff;
+	border:#000000 1px solid;
+}
+.datepickerToday
+{
+	border:#000000 1px solid;
+}
+.theme_header 
+{
+	background-color:#e5ecf9;
+	border-right: #3366cc 0px none; 
+	border-left: #3366cc 0px none; 
+	border-bottom: #3366cc 1px solid;
+	border-top: #3366cc 1px solid;
+}
+
+.links a
+{
+    color:Blue;
+    white-space:nowrap;
+}
